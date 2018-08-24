@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 
-const APP_TOKEN = 'tu app token';
+const APP_TOKEN = 'EAAbVWpMOSCABADVqESsv9JjLl6FHKrO39PurURg8PH7XgoGjv2Xn4f1mKCZAoZBgI2LKZCdB8lbRKYllbNMsyXRtZA1s1aVZCRuYqJ0gltyHFtF7SSAQnz5qr8uBsztUDZBkK9PiFDb1mQu7W3qpzfcVRMOZCoCDRTe4RKD8Q0aAwZDZD';
 
 var app = express();
 app.use(bodyParser.json());
@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
 });
 //pa validar servidor
 app.get('/webhook', function (req, res) {
-    if (req.query['hub.verify_token'] === 'my_token') {
+    if (req.query['hub.verify_token'] === '123456') {
         res.send(req.query['hub.challenge']);
     } else {
         res.send('Tu no tienes permiso');
